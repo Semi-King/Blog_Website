@@ -1,0 +1,19 @@
+{
+  "name": "blog-website",
+  "version": "1.0.0",
+  "description": "Simple Blog website using EJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Semi-King/Blog_Website.git"
+  },
+  "author": "Prince Ngubane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Semi-King/Blog_Website/issues"
+  },
+  "homepage": "https://github.com/Semi-King/Blog_Website#readme"
+}
