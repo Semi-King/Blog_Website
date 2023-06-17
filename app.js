@@ -36,8 +36,18 @@ app.get("/compose", function (req, res) {
 
 // Capturing information from input box in compose page
 app.post("/compose", function (req, res) {
-  console.log(req.body.value);
+  const post = {
+    title: req.body.postTitle,
+    content: req.body.postBody,
+  };
+
+  // Additional Logic
   res.send("Data captured");
+
+  // My SOLUTION CODE
+  // const { postTitle, postBody } = req.body;
+  // console.log("Title:", postTitle);
+  // console.log("Body:", postBody);
 });
 
 app.listen(3000, function () {
