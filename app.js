@@ -35,7 +35,7 @@ app.get("/compose", function (req, res) {
 });
 
 // Capturing information from input box in compose page
-app.post("/", function (req, res) {
+app.post("/compose", function (req, res) {
   console.log(req.body.value);
   res.send("Data captured");
 });
