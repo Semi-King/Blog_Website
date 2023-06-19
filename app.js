@@ -51,7 +51,19 @@ app.post("/compose", function (req, res) {
 
 //  Routing in Express
 app.get("/posts/:blogPost", function(req, res) {
-  console.log(req.params.blogPost);
+  const requestedTitle = req.params.blogPost;
+
+
+  posts.forEach(function(post){
+    const storedTitle = post.title;
+
+    if (storedTitle === requestedTitle) {
+      console.log("Match Found!");
+    } else {
+      console.log("No match!");
+    }
+  });
+
 
   // Additional Logic
   res.send("Data captured");
@@ -61,6 +73,9 @@ app.get("/posts/:blogPost", function(req, res) {
   // console.log("Title:", postTitle);
   // console.log("Body:", postBody);
 });
+
+
+
 
 app.listen(3000, function () {
   console.log("Server started on port 3000");
