@@ -47,6 +47,12 @@ app.post("/compose", function (req, res) {
 
   res.redirect("/");
 
+});
+
+//  Routing in Express
+app.get("/posts/:blogPost", function(req, res) {
+  console.log(req.params.blogPost);
+
   // Additional Logic
   res.send("Data captured");
 
