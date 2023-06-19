@@ -37,6 +37,10 @@ app.get("/compose", function (req, res) {
   res.render("compose");
 });
 
+// app.get("/post", function(req, res) {
+//   res.render("post");
+// });
+
 // Capturing information from input box in compose page
 app.post("/compose", function (req, res) {
   const post = {
@@ -61,15 +65,18 @@ app.get("/posts/:blogPost", function(req, res) {
     const requestedTitleLowerCase = _.lowerCase(requestedTitle);
 
     if (storedTitleLowerCase === requestedTitleLowerCase) {
-      console.log("Match Found!");
-    } else {
-      console.log("No match!");
-    }
+     
+     res.render("post", {
+      title: post.title,
+      content: post.content
+     });
+
+    } 
   });
 
 
-  // Additional Logic
-  res.send("Data captured");
+  // // Additional Logic
+  // res.send("Data captured");
 
   // My SOLUTION CODE
   // const { postTitle, postBody } = req.body;
