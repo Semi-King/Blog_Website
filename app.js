@@ -1,5 +1,4 @@
-//jshint esversion:6
-
+//Code boiler plate 
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -18,6 +17,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// Project code
 let posts = [];
 
 app.get("/", function (req, res) {
@@ -46,9 +46,6 @@ app.post("/compose", function (req, res) {
   posts.push(post);
 
   res.redirect("/");
-
-  // Additional Logic
-  res.send("Data captured");
 
   // My SOLUTION CODE
   // const { postTitle, postBody } = req.body;
